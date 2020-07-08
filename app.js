@@ -40,5 +40,10 @@ function getWeather() {
 	weatherInfo
 		.getWeather()
 		.then((res) => ui.injectData(res))
-		.catch(() => ui.noResponse("City not Found", "alert alert-danger"));
+		.catch(() =>
+			ui.noResponse(
+				"City not Found, please enter correct spelling ",
+				"alert alert-danger"
+			)
+		);
 }
