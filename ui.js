@@ -24,8 +24,8 @@ class UI {
 		// console.log(iconurl);
 		// console.log(this.icon);
 		$(this.icon).attr("src", iconurl);
-		this.icon.style.height = "85px";
-		this.icon.style.width = "85px";
+		this.icon.style.height = "70px";
+		this.icon.style.width = "70px";
 		this.string.textContent = response.main.temp.toFixed();
 		this.string.innerHTML += "&nbsp;&deg;C";
 		//this.details.textContent = response.weather[0].description;
