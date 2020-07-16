@@ -20,12 +20,13 @@ class UI {
 		this.desc.textContent = response.weather[0].main;
 		this.desc.textContent = response.weather[0].description;
 		var iconcode = response.weather[0].icon;
-		var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+		var iconurl =
+			"http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
 		// console.log(iconurl);
 		// console.log(this.icon);
 		$(this.icon).attr("src", iconurl);
-		this.icon.style.height = "70px";
-		this.icon.style.width = "70px";
+		this.icon.style.height = "100px";
+		this.icon.style.width = "100px";
 		this.string.textContent = response.main.temp.toFixed();
 		this.string.innerHTML += "&nbsp;&deg;C";
 		//this.details.textContent = response.weather[0].description;
@@ -34,7 +35,7 @@ class UI {
 		this.feelsLike.innerHTML += `&nbsp;&deg;C`;
 		this.pressure.textContent =
 			`Pressure:  ${response.main.pressure}` + "  Pa";
-		this.wind.textContent = `Wind :  ${response.wind.speed}`;
+		this.wind.textContent = `Wind :  ${response.wind.speed} + MPH`;
 	}
 
 	// Add alert for user if city not found
